@@ -1,14 +1,15 @@
 class TapeEquilibrium
   def minimal_difference(array)
-    min = Float::INFINITY
-    left_sum = array.shift
-    right_sum = array.reduce(:+)
-    (0..(array.length - 1)).each do |i|
-      difference = (left_sum - right_sum).abs
-      min = difference if difference < min
-      left_sum += array[i]
-      right_sum -= array[i]
+    left_sum = a.shift
+    right_sum = a.reduce(:+)
+    min_sum = (left_sum - right_sum).abs
+    current_sum = min_sum
+    (0...a.length).each do |i|
+      current_sum = (left_sum - right_sum).abs
+      min_sum = current_sum if current_sum < min_sum
+      left_sum += a[i]
+      right_sum -= a[i]
     end
-    min
+    min_sum
   end
 end
