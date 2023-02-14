@@ -1,3 +1,3 @@
 # Algorithms
 
-This is an implementation of some algorithms lessons.
+This is an implementation of some algorithm lessons.
